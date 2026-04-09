@@ -1,0 +1,15 @@
+// Pisca o LED em Morse-Pedro e henrique
+void morse(int tempo, int vezes, int entrada) {
+    gpio_set_direction(entrada, GPIO_MODE_OUTPUT);
+    for(int i = 0; i < vezes; i++) {
+        gpio_set_level(entrada, 1);
+        vTaskDelay(tempo / portTICK_PERIOD_MS);
+        gpio_set_level(entrada, 0);
+        vTaskDelay(250 / portTICK_PERIOD_MS);
+
+
+
+
+ // Configura LED-henrique e buzzer-fernando
+    gpio_set_direction(LED, GPIO_MODE_OUTPUT);
+    gpio_set_direction(BUZZER, GPIO_MODE_OUTPUT);
